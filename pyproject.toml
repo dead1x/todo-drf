@@ -1,5 +1,5 @@
 [project]
-name = "todo-drf"
+name = "todo_project"
 version = "0.1.0"
 description = "A simple to-do app built with Django and DRF"
 authors = [
