@@ -11,7 +11,7 @@ class TodoAPIView(APIView):
     permission_classes = [AllowAny]
 
     def get(self, request):
-        todos = Todo.objects.all()
+        todos = Todo.objects.filter(is_completed=False)
         serializer = TodoSerializer(todos, many=True)
         return Response({"todos": serializer.data}, status=status.HTTP_200_OK)
     
